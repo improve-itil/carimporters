@@ -9,10 +9,9 @@
   body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background: url('blue-car-driving-road.jpg') no-repeat center center fixed;
+    background: url('honda2.jpg') no-repeat center center fixed;
     background-size: cover;
     line-height: 1.8;
-    transition: background-image 0.6s ease-in-out;
   }
 
   .overlay {
@@ -33,32 +32,6 @@
     padding: 5vw;
     color: #222;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  }
-
-  /* כפתורי המותגים */
-  .brand-buttons {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 3;
-    display: flex;
-    gap: 10px;
-  }
-
-  .brand-buttons button {
-    background-color: rgba(255,255,255,0.8);
-    border: 1px solid #004aad;
-    color: #004aad;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .brand-buttons button:hover {
-    background-color: #004aad;
-    color: white;
   }
 
   section {
@@ -119,19 +92,13 @@
 </head>
 <body>
   <div class="overlay"></div>
-
-  <div class="brand-buttons">
-    <button onclick="changeBackground('honda')">Honda</button>
-    <button onclick="changeBackground('volvo')">Volvo</button>
-  </div>
-
   <div class="content">
+
     <header>
       <p style="text-align:center; font-weight:600;">פיתוח הדרכה | למידה דיגיטלית | תהליכי הכשרה | סרטוני הדרכה</p>
       <h1>פתרונות הדרכה דיגיטליים ליבואני כלי רכב</h1>
     </header>
 
-    <!-- התוכן שלך נשאר ללא שינוי -->
     <section>
       <h2>לומדות מדף מותאמות ליבואני רכב</h2>
       <ul>
@@ -207,16 +174,5 @@
       <a href="mailto:ziv@improve-it.co.il">ziv@improve-it.co.il</a> | בזל 3, פתח תקווה
     </footer>
   </div>
-
-  <script>
-    function changeBackground(brand) {
-      let images = {
-        honda: ['honda1.jpg', 'honda2.jpg'],
-        volvo: ['volvo1.jpg', 'volvo2.jpg']
-      };
-      const randomImage = images[brand][Math.floor(Math.random() * 2)];
-      document.body.style.backgroundImage = `url('${randomImage}')`;
-    }
-  </script>
 </body>
 </html>
